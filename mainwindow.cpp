@@ -28,9 +28,9 @@ MainWindow::MainWindow(QWidget *parent) :
         { 11, 111 }
     };
     auto manager = new TreeManager();
-    auto model = new TreeModel(manager);
     manager->addNodes(objects);
     manager->addDependencies(objectsDpns);
+    auto model = new TreeModel(manager);
 
     ui->treeView->setModel(model);
 }
